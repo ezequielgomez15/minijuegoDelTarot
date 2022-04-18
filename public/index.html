@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fafafa;
+            background-color: #2F2F2F;
+        }
+
+        section{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        img{
+            height: 350px;
+            width: 200px;
+        }
+
+        #PrimeraSeccion .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1{
+            margin-bottom: 15px; 
+            font-size: 45px;
+            font-family: monospace;
+        }
+
+        h2{
+            font-weight: 400;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            width: 65%;
+            height: 177px;
+            border-radius: 5px;
+            padding-top: 20px;
+        }
+
+        input{
+            background-color: #DADADA;
+            border: none;
+            border-radius: 4px;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+        #SegundaSeccion img{
+            width: 50%;
+            height: 250px;
+        }
+
+        #SegundaSeccion{
+            /* display: none; */
+            height: 100vh;
+            align-items: center;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        #SegundaSeccion .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 50%;
+        }
+
+        #SegundaSeccion .container span{
+            margin-top: 20px;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+        .mostrar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ocultar{
+            display: none;
+        } 
+
+        #TercerSeccion{
+            font-size: 40px;
+            width: 350px;
+            margin: 20px auto;
+            height: 100vh;
+            /* padding: 12px 68px; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item{
+            padding: 12px 68px;
+        }
+
+        #QuintaSeccion{
+            /* display: none; */
+        }
+
+        #QuintaSeccion .container img{
+            width: 100px;
+            height: 150px;
+        }
+
+        #QuintaSeccion{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 300px;
+            margin: 20px auto;
+            height: 100vh;
+        }
+
+        .container11{
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        .container22{
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        #QuintaSeccion  img{
+            width: 100px;
+            height: 160px;
+        }
+
+        #CuartaSeccion{
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 300px;
+            margin: 20px auto;
+        }
+
+        #SextaSeccion{
+            display: none;
+        } 
+
+        p{
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #salir img{
+            height: 42px;
+            width: 42px;
+            
+        }
+
+        .botonSalir{
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .container{
+            height: 100vh;
+        }
+
+        #PrimeraSeccion img{
+            height: 90px;
+            width: 70px;
+        }
+
+        .input-group{
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .input-group>.form-control, .input-group>.form-select{
+            width: 100%;
+            height: 30px;
+        }
+
+        #PrimeraSeccion .btn-light{
+            margin: 20px;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        .modal{
+            background-color: #444444;
+            width: 60%;
+            height: 35%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .modal .btn-light{
+            margin: 10px;
+            width: 70%;
+            
+        }
+
+        .container11 div{
+            width: 124px;
+        }
+
+        .container22 div{
+            width: 124px;
+        }
+
+        #match2{
+            font-size: 35px;
+        }
+
+        @media only screen and (max-width: 450px){
+
+        
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fafafa;
+            background-color: #2F2F2F;
+        }
+
+        section{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+
+        img{
+            height: 350px;
+            width: 200px;
+        }
+
+        #PrimeraSeccion .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        h1{
+            margin-bottom: 15px; 
+            font-size: 45px;
+            font-family: monospace;
+        }
+
+        h2{
+            font-weight: 400;
+            text-align: center;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            width: 65%;
+            height: 177px;
+            border-radius: 5px;
+            padding-top: 20px;
+        }
+
+        input{
+            background-color: #DADADA;
+            border: none;
+            border-radius: 4px;
+            height: 20px;
+            margin-bottom: 20px;
+        }
+
+        #SegundaSeccion img{
+            width: 50%;
+            height: 250px;
+        }
+
+        #SegundaSeccion{
+            /* display: none; */
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+        }
+
+        #SegundaSeccion .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 50%;
+        }
+
+        #SegundaSeccion .container span{
+            margin-top: 20px;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+        .mostrar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .ocultar{
+            display: none;
+        } 
+
+        #TercerSeccion{
+            font-size: 40px;
+            width: 100%;
+            height: 100vh;
+            /* padding: 12px 68px; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-item{
+            padding: 12px 68px;
+        }
+
+        #QuintaSeccion{
+            /* display: none; */
+        }
+
+        #QuintaSeccion .container img{
+            width: 100px;
+            height: 150px;
+        }
+
+        #QuintaSeccion{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .container11{
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        .container22{
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+
+        #QuintaSeccion  img{
+            width: 100px;
+            height: 160px;
+        }
+
+        #CuartaSeccion{
+            z-index: 999;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+        }
+
+        #SextaSeccion{
+            display: none;
+        } 
+
+        p{
+            margin: 0px;
+            font-size: 14px;
+        }
+
+        #salir img{
+            height: 42px;
+            width: 42px;
+            
+        }
+
+        .botonSalir{
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .container{
+            height: 100vh;
+        }
+
+        #PrimeraSeccion img{
+            height: 90px;
+            width: 70px;
+        }
+
+        .input-group{
+            display: flex;
+            flex-direction: column;
+        } 
+
+        .input-group>.form-control, .input-group>.form-select{
+            width: 100%;
+            height: 30px;
+        }
+
+        #PrimeraSeccion .btn-light{
+            margin: 20px;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+        .modal{
+            background-color: #444444;
+            width: 60%;
+            height: 35%;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .modal .btn-light{
+            margin: 10px;
+            width: 70%;
+            
+        }
+
+        .container11 div{
+            width: 124px;
+        }
+
+        .container22 div{
+            width: 124px;
+        }
+
+        #match2{
+            font-size: 35px;
+        }
+
+    }
+
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <section id="PrimeraSeccion" class="">
+        <div class="container">
+            <h1><i>TAROT APP </i></h1>
+            <img src="https://onlinetarot.gr/img/logo.png" alt="">
+            <form action="">
+                <div class="input-group mb-3">
+                    <label for="jugadorUno">Jugador Uno</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre uno" aria-label="Recipient's username" aria-describedby="basic-addon2" id="jugadorUno" >
+                </div>
+                <div class="input-group mb-3">
+                    <label for="jugadorUno">Jugador Dos</label>
+                    <input type="text" class="form-control" placeholder="Ingrese nombre dos" aria-label="Recipient's username" aria-describedby="basic-addon2" id="jugadorDos">
+                </div>
+            </form>
+            <span id="lleneForm"></span>
+            <button id="voyATenerSuerte" class="btn btn-light">
+                <span>voy a tener suerte!</span>
+            </button>
+            
+        </div>
+    </section>
+
+    <section id="SegundaSeccion" class="ocultar">
+        <div class="container">
+            <img src="./img/b46e957869b36edf7a5a3663317c8cf581b11f12_hq.gif" alt="">
+            <span>cargando tus cartas</span>
+        </div>
+    </section>
+
+
+    <section id="TercerSeccion" class="ocultar">
+        <div class="container">
+            <div class="botonSalir">
+                <a href="#" id="salir" ><img src="https://image.flaticon.com/icons/png/512/458/458594.png" alt=""></a>
+            </div>
+    
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active carta">
+                        <h2 id="h2_nombre"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic00">
+                        <h3 id="titulo00"></h3>
+                        <p id="txt00"></p>
+                    </div>
+                    <div class="carousel-item carta">
+                        <h2 id="h2_nombre_2"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic01">
+                        <h3 id="titulo01"></h3>
+                        <p id="txt01"></p>
+                    </div>
+                    <div class="carousel-item carta">
+                        <h2 id="h2_nombre_3"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic02">
+                        <h3 id="titulo02"></h3>
+                        <p id="txt02"></p>
+                    </div>
+                    
+        
+                    <div class="carousel-item carta">
+                        <h2 id="h2_nombre_4"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic03">
+                        <h3 id="titulo03"></h3>
+                        <p id="txt03"></p>
+                    </div>
+                    <div class="carousel-item carta">
+                        <h2 id="h2_nombre_5"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic04">
+                        <h3 id="titulo04"></h3>
+                        <p id="txt04"></p>
+                    </div>
+                    <div class="carousel-item carta">
+                        <h2 id="h2_nombre_6"></h2>
+                        <img src="..." class="d-block w-100" alt="..." id="pic05">
+                        <h3 id="titulo05"></h3>
+                        <p id="txt05"></p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="CuartaSeccion" class="ocultar">
+            <div class="modal">
+                    <button id="verResultados" class="btn btn-light">ver resultados</button>
+                    <button class="btn btn-light" id="volverTirar">volver a tirar</button>
+                <button id="close" class="btn btn-light">Cerrar</button>
+            </div>
+    </section>
+
+    <section id="QuintaSeccion" class="ocultar">
+
+        <button class="btn btn-light" id="volverAInicio">volver al inicio</button>
+
+        <div class="container1">
+            <h3 id="h3_01">Cartas de: </h3>
+            <div class="container11">
+                <div class="primerJugador_resultados">
+                    <img src="" alt="" id="img00_">
+                    <h2 id="h2_00"></h2>
+                </div>
+                <div class="primerJugador_resultados_01">
+                    <img src="" alt="" id="img01_">
+                    <h2 id="h2_01"></h2>
+                </div>
+                <div class="primerJugador_resultados_02">
+                    <img src="" alt="" id="img02_">
+                    <h2 id="h2_02"></h2>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <span id="match2"></span>
+
+
+
+        <div class="container2">
+            <h3 id="h3_02">Cartas de: </h3>
+            <div class="container22">
+                <div class="segundoJugador_resultados_03">
+                    <img src="" alt="" id="img03_">
+                    <h2 id="h2_03"></h2>
+                </div>
+                <div class="segundoJugador_resultados_04">
+                    <img src="" alt="" id="img04_">
+                    <h2 id="h2_04"></h2>
+                </div>
+                <div class="segundoJugador_resultados_05">
+                    <img src="" alt="" id="img05_">
+                    <h2 id="h2_05"></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="SextaSeccion" class="ocultar"><div class="container"></div></section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+</html>
